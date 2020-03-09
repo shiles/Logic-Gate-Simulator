@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AB4B7FDE241655EB001EEB96 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FDD241655EB001EEB96 /* main.swift */; };
+		AB4B7FE724166BAB001EEB96 /* Gates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FE624166BAB001EEB96 /* Gates.swift */; };
+		AB4B7FE924166BDA001EEB96 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FE824166BDA001EEB96 /* Array+Extensions.swift */; };
+		AB4B7FEB24166BF6001EEB96 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FEA24166BF6001EEB96 /* Bool+Extensions.swift */; };
+		AB4B7FED24166C0D001EEB96 /* GateRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FEC24166C0D001EEB96 /* GateRunner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		AB4B7FDA241655EA001EEB96 /* Logic Simulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Logic Simulator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4B7FDD241655EB001EEB96 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AB4B7FE624166BAB001EEB96 /* Gates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gates.swift; sourceTree = "<group>"; };
+		AB4B7FE824166BDA001EEB96 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		AB4B7FEA24166BF6001EEB96 /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
+		AB4B7FEC24166C0D001EEB96 /* GateRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateRunner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,29 @@
 		AB4B7FDC241655EA001EEB96 /* Logic Simulator */ = {
 			isa = PBXGroup;
 			children = (
+				AB4B7FE524165631001EEB96 /* Extensions */,
+				AB4B7FE42416562B001EEB96 /* Gates */,
 				AB4B7FDD241655EB001EEB96 /* main.swift */,
 			);
 			path = "Logic Simulator";
+			sourceTree = "<group>";
+		};
+		AB4B7FE42416562B001EEB96 /* Gates */ = {
+			isa = PBXGroup;
+			children = (
+				AB4B7FE624166BAB001EEB96 /* Gates.swift */,
+				AB4B7FEC24166C0D001EEB96 /* GateRunner.swift */,
+			);
+			path = Gates;
+			sourceTree = "<group>";
+		};
+		AB4B7FE524165631001EEB96 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AB4B7FE824166BDA001EEB96 /* Array+Extensions.swift */,
+				AB4B7FEA24166BF6001EEB96 /* Bool+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4B7FED24166C0D001EEB96 /* GateRunner.swift in Sources */,
+				AB4B7FE724166BAB001EEB96 /* Gates.swift in Sources */,
+				AB4B7FE924166BDA001EEB96 /* Array+Extensions.swift in Sources */,
 				AB4B7FDE241655EB001EEB96 /* main.swift in Sources */,
+				AB4B7FEB24166BF6001EEB96 /* Bool+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
