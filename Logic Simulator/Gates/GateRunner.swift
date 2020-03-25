@@ -8,18 +8,13 @@
 
 import Foundation
 
-public class GateRunner {
-    private var model: [Gate]
+class GateRunner {
     
-    public init(for model: [Gate]) {
-        self.model = model
-    }
-    
-    public func simulate() {
-        while(model.map { $0.hasChanged }.contains(true)) {
-            model.forEach { gate in
-                gate.run()
-            }
+    func simulate(_ model: GateModel) {
+        model.compactMap{ $0 as? Output }.forEach { $0.hasChanged = true }
+        
+        while(model.outputsDidChange) {
+            model.forEach { gate in gate.run() }
         }
     }
 }

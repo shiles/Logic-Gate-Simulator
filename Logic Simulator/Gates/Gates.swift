@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol Gate {
-    var description: String { get }
+    var description: String { get set }
     var inputs: [Gate] { get set }
     var output: Bool { get }
     var hasChanged: Bool { get }
@@ -18,7 +18,7 @@ public protocol Gate {
 }
 
 public class Not: Gate {
-    public var description: String { "Not" }
+    public var description: String = ""
     public var inputs: [Gate] = []
     public var output: Bool = false
     public var hasChanged: Bool = false
@@ -34,7 +34,7 @@ public class Not: Gate {
 }
 
 public class Or: Gate {
-    public var description: String { "Or" }
+    public var description: String = ""
     public var inputs: [Gate] = []
     public var output: Bool = false
     public var hasChanged: Bool = false
@@ -50,7 +50,7 @@ public class Or: Gate {
 }
 
 public class Nor: Gate {
-    public var description: String { "Nor" }
+    public var description: String = ""
     public var inputs: [Gate] = []
     public var output: Bool = false
     public var hasChanged: Bool = false
@@ -66,7 +66,7 @@ public class Nor: Gate {
 }
 
 public class And: Gate {
-    public var description: String { "and" }
+    public var description: String = ""
     public var inputs: [Gate] = []
     public var output: Bool = false
     public var hasChanged: Bool = false
@@ -81,7 +81,7 @@ public class And: Gate {
 }
 
 public class Nand: Gate {
-    public var description: String { "Nand" }
+    public var description: String = ""
     public var inputs: [Gate] = []
     public var output: Bool = false
     public var hasChanged: Bool = false
@@ -96,7 +96,7 @@ public class Nand: Gate {
 }
 
 public class Xor: Gate {
-    public var description: String { "Xor" }
+    public var description: String = ""
     public var inputs: [Gate] = []
     public var output: Bool = false
     public var hasChanged: Bool = false
@@ -111,7 +111,7 @@ public class Xor: Gate {
 }
 
 public class Xnor: Gate {
-    public var description: String { "Xnor" }
+    public var description: String = ""
     public var inputs: [Gate] = []
     public var output: Bool = false
     public var hasChanged: Bool = false
@@ -126,7 +126,7 @@ public class Xnor: Gate {
 }
 
 public class Input: Gate {
-    public var description: String { "Input" }
+    public var description: String = ""
     public var inputs: [Gate] = []
     public var output: Bool = false
     public var hasChanged: Bool = false
@@ -140,7 +140,7 @@ public class Input: Gate {
 }
 
 public class Output: Gate {
-    public var description: String { "Input" }
+    public var description: String = ""
     public var inputs: [Gate] = []
     public var output: Bool = false
     public var hasChanged: Bool = true

@@ -9,25 +9,61 @@
 import Foundation
 
 // Inputs
-var inputA = Input(initialValue: false)
-var inputB = Input(initialValue: false)
+var inputA = Input(initialValue: true)
+var inputB = Input(initialValue: true)
+var inputC = Input(initialValue: false)
 
 // Gates
-var norA = Nor()
-var norB = Nor()
-norA.inputs = [inputA, norB]
-norB.inputs = [inputB, norA]
+var xorA = Xor()
+var xorB = Xor()
+var andA = And()
+var andB = And()
+var or   = Or()
+
+xorA.inputs = [inputA, inputB]
+xorB.inputs = [inputC, xorA]
+andA.inputs = [xorA, inputC]
+andB.inputs = [inputA, inputB]
+or.inputs   = [andA, andB]
 
 // Outputs
-var outputA = Output()
-var outputB = Output()
-outputA.inputs = [norA]
-outputB.inputs = [norB]
+var outputSum = Output()
+var outputCarry = Output()
+outputSum.inputs = [xorB]
+outputCarry.inputs = [or]
 
-// Build Runner + Simulate Logic
-let runner = GateRunner(for: [inputA, inputB, norA, norB, outputA, outputB])
-runner.simulate()
+// Build Runner
+//let runner = GateRunner(for: [inputA, inputB, inputC, xorA, xorB, andA, andB, or, outputSum, outputCarry])
+let runner = GateRunner()
 
 // Test Output
-print("Output A \(outputA.output)")
-print("Output B \(outputB.output)")
+inputA.output = false
+inputB.output = false
+inputC.output = false
+runner.simulate([inputA, or, xorA, xorB, andA, or, inputB, inputC, xorA, outputSum, outputCarry, andB])
+
+// Print output
+print("Sum: \(outputSum.output)")
+print("Carry: \(outputCarry.output)")
+print("\n")
+
+// Number Two
+var input1 = Input(initialValue: true)
+var input2 = Input(initialValue: true)
+
+var nand1 = Nand()
+var nand2 = Nand()
+var otpt1 = Output()
+var otpt2 = Output()
+
+nand1.inputs = [input1, nand2]
+nand2.inputs = [input2, nand1]
+otpt1.inputs = [nand1]
+otpt2.inputs = [nand2]
+
+let runnner = GateRunner()
+runnner.simulate([nand1, nand2, otpt1, otpt2])
+
+print("A: \(otpt1.output)")
+print("B: \(otpt2.output)")
+print("\n")

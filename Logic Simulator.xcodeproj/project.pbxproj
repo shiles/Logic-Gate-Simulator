@@ -12,6 +12,8 @@
 		AB4B7FE924166BDA001EEB96 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FE824166BDA001EEB96 /* Array+Extensions.swift */; };
 		AB4B7FEB24166BF6001EEB96 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FEA24166BF6001EEB96 /* Bool+Extensions.swift */; };
 		AB4B7FED24166C0D001EEB96 /* GateRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FEC24166C0D001EEB96 /* GateRunner.swift */; };
+		AB4B7FF12416824C001EEB96 /* GateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FF02416824C001EEB96 /* GateModel.swift */; };
+		AB4B7FF32416828D001EEB96 /* Sequences+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FF22416828D001EEB96 /* Sequences+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +35,8 @@
 		AB4B7FE824166BDA001EEB96 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		AB4B7FEA24166BF6001EEB96 /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
 		AB4B7FEC24166C0D001EEB96 /* GateRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateRunner.swift; sourceTree = "<group>"; };
+		AB4B7FF02416824C001EEB96 /* GateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateModel.swift; sourceTree = "<group>"; };
+		AB4B7FF22416828D001EEB96 /* Sequences+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequences+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 			children = (
 				AB4B7FE624166BAB001EEB96 /* Gates.swift */,
 				AB4B7FEC24166C0D001EEB96 /* GateRunner.swift */,
+				AB4B7FF02416824C001EEB96 /* GateModel.swift */,
 			);
 			path = Gates;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 			children = (
 				AB4B7FE824166BDA001EEB96 /* Array+Extensions.swift */,
 				AB4B7FEA24166BF6001EEB96 /* Bool+Extensions.swift */,
+				AB4B7FF22416828D001EEB96 /* Sequences+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -148,6 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4B7FF12416824C001EEB96 /* GateModel.swift in Sources */,
+				AB4B7FF32416828D001EEB96 /* Sequences+Extensions.swift in Sources */,
 				AB4B7FED24166C0D001EEB96 /* GateRunner.swift in Sources */,
 				AB4B7FE724166BAB001EEB96 /* Gates.swift in Sources */,
 				AB4B7FE924166BDA001EEB96 /* Array+Extensions.swift in Sources */,
