@@ -13,7 +13,7 @@ typealias GateModel = [Gate]
 extension GateModel {
     
     var outputsDidChange: Bool {
-        self.map(\.hasChanged).contains(true)
+        self.map{ $0.hasChanged }.contains(true)
     }
     
 }

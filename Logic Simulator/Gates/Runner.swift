@@ -8,9 +8,9 @@
 
 import Foundation
 
-class GateRunner {
+class Runner {
     
-    func simulate(_ model: GateModel) {
+    static func simulate(_ model: GateModel) {
         model.compactMap{ $0 as? Output }.forEach { $0.hasChanged = true }
         
         while(model.outputsDidChange) {

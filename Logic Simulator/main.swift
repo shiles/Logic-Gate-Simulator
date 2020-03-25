@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK: - Full Adder Example Circuit
+
 // Inputs
 var inputA = Input(initialValue: true)
 var inputB = Input(initialValue: true)
@@ -32,20 +34,18 @@ var outputCarry = Output()
 outputSum.inputs = [xorB]
 outputCarry.inputs = [or]
 
-// Build Runner
-//let runner = GateRunner(for: [inputA, inputB, inputC, xorA, xorB, andA, andB, or, outputSum, outputCarry])
-let runner = GateRunner()
-
 // Test Output
 inputA.output = false
 inputB.output = false
 inputC.output = false
-runner.simulate([inputA, or, xorA, xorB, andA, or, inputB, inputC, xorA, outputSum, outputCarry, andB])
+Runner.simulate([inputA, or, xorA, xorB, andA, or, inputB, inputC, xorA, outputSum, outputCarry, andB])
 
 // Print output
 print("Sum: \(outputSum.output)")
 print("Carry: \(outputCarry.output)")
 print("\n")
+
+// MARK: - Nands Example Circuit
 
 // Number Two
 var input1 = Input(initialValue: true)
@@ -61,8 +61,7 @@ nand2.inputs = [input2, nand1]
 otpt1.inputs = [nand1]
 otpt2.inputs = [nand2]
 
-let runnner = GateRunner()
-runnner.simulate([nand1, nand2, otpt1, otpt2])
+Runner.simulate([nand1, nand2, otpt1, otpt2])
 
 print("A: \(otpt1.output)")
 print("B: \(otpt2.output)")
