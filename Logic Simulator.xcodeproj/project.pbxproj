@@ -13,6 +13,23 @@
 		AB4B7FEB24166BF6001EEB96 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FEA24166BF6001EEB96 /* Bool+Extensions.swift */; };
 		AB4B7FED24166C0D001EEB96 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FEC24166C0D001EEB96 /* Runner.swift */; };
 		AB4B7FF12416824C001EEB96 /* GateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FF02416824C001EEB96 /* GateModel.swift */; };
+		AB5B36CB242CB724005BDB57 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FE824166BDA001EEB96 /* Array+Extensions.swift */; };
+		AB5B36CC242CB727005BDB57 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FEA24166BF6001EEB96 /* Bool+Extensions.swift */; };
+		AB5B36CD242CB739005BDB57 /* Gates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FE624166BAB001EEB96 /* Gates.swift */; };
+		AB5B36CE242CB73C005BDB57 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FEC24166C0D001EEB96 /* Runner.swift */; };
+		AB5B36CF242CB740005BDB57 /* GateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B7FF02416824C001EEB96 /* GateModel.swift */; };
+		AB5B36D1242CB769005BDB57 /* NotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36D0242CB769005BDB57 /* NotTests.swift */; };
+		AB5B36D3242CB7F2005BDB57 /* OrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36D2242CB7F2005BDB57 /* OrTests.swift */; };
+		AB5B36D5242CB823005BDB57 /* NorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36D4242CB823005BDB57 /* NorTests.swift */; };
+		AB5B36D7242CB856005BDB57 /* AndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36D6242CB856005BDB57 /* AndTests.swift */; };
+		AB5B36D9242CB87C005BDB57 /* NandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36D8242CB87C005BDB57 /* NandTests.swift */; };
+		AB5B36DB242CB8A6005BDB57 /* XorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36DA242CB8A6005BDB57 /* XorTests.swift */; };
+		AB5B36DD242CB8CB005BDB57 /* XnorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36DC242CB8CB005BDB57 /* XnorTests.swift */; };
+		AB5B36DF242CB8F5005BDB57 /* InputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36DE242CB8F5005BDB57 /* InputTests.swift */; };
+		AB5B36E1242CB919005BDB57 /* OuputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36E0242CB919005BDB57 /* OuputTests.swift */; };
+		AB5B36E3242CB9B2005BDB57 /* Bool+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36E2242CB9B2005BDB57 /* Bool+ExtensionsTests.swift */; };
+		ABF22AE0242B4EC200B826B3 /* Logic_Simulator_XCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF22ADF242B4EC200B826B3 /* Logic_Simulator_XCTests.swift */; };
+		ABF22AE9242B4F0400B826B3 /* Array+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF22AE8242B4F0400B826B3 /* Array+ExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,10 +52,31 @@
 		AB4B7FEA24166BF6001EEB96 /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
 		AB4B7FEC24166C0D001EEB96 /* Runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
 		AB4B7FF02416824C001EEB96 /* GateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateModel.swift; sourceTree = "<group>"; };
+		AB5B36D0242CB769005BDB57 /* NotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotTests.swift; sourceTree = "<group>"; };
+		AB5B36D2242CB7F2005BDB57 /* OrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrTests.swift; sourceTree = "<group>"; };
+		AB5B36D4242CB823005BDB57 /* NorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NorTests.swift; sourceTree = "<group>"; };
+		AB5B36D6242CB856005BDB57 /* AndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndTests.swift; sourceTree = "<group>"; };
+		AB5B36D8242CB87C005BDB57 /* NandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NandTests.swift; sourceTree = "<group>"; };
+		AB5B36DA242CB8A6005BDB57 /* XorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XorTests.swift; sourceTree = "<group>"; };
+		AB5B36DC242CB8CB005BDB57 /* XnorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XnorTests.swift; sourceTree = "<group>"; };
+		AB5B36DE242CB8F5005BDB57 /* InputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTests.swift; sourceTree = "<group>"; };
+		AB5B36E0242CB919005BDB57 /* OuputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuputTests.swift; sourceTree = "<group>"; };
+		AB5B36E2242CB9B2005BDB57 /* Bool+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+ExtensionsTests.swift"; sourceTree = "<group>"; };
+		ABF22ADD242B4EC200B826B3 /* Logic Simulator XCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Logic Simulator XCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF22ADF242B4EC200B826B3 /* Logic_Simulator_XCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic_Simulator_XCTests.swift; sourceTree = "<group>"; };
+		ABF22AE1242B4EC200B826B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABF22AE8242B4F0400B826B3 /* Array+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ExtensionsTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AB4B7FD7241655EA001EEB96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABF22ADA242B4EC200B826B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -52,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4B7FDC241655EA001EEB96 /* Logic Simulator */,
+				ABF22ADE242B4EC200B826B3 /* Logic Simulator XCTests */,
 				AB4B7FDB241655EA001EEB96 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4B7FDA241655EA001EEB96 /* Logic Simulator */,
+				ABF22ADD242B4EC200B826B3 /* Logic Simulator XCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +133,42 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		ABF22ADE242B4EC200B826B3 /* Logic Simulator XCTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABF22AE5242B4ED000B826B3 /* Extensions */,
+				ABF22AEA242B4FC100B826B3 /* Gates */,
+				ABF22ADF242B4EC200B826B3 /* Logic_Simulator_XCTests.swift */,
+				ABF22AE1242B4EC200B826B3 /* Info.plist */,
+			);
+			path = "Logic Simulator XCTests";
+			sourceTree = "<group>";
+		};
+		ABF22AE5242B4ED000B826B3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ABF22AE8242B4F0400B826B3 /* Array+ExtensionsTests.swift */,
+				AB5B36E2242CB9B2005BDB57 /* Bool+ExtensionsTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ABF22AEA242B4FC100B826B3 /* Gates */ = {
+			isa = PBXGroup;
+			children = (
+				AB5B36D0242CB769005BDB57 /* NotTests.swift */,
+				AB5B36D2242CB7F2005BDB57 /* OrTests.swift */,
+				AB5B36D4242CB823005BDB57 /* NorTests.swift */,
+				AB5B36D6242CB856005BDB57 /* AndTests.swift */,
+				AB5B36D8242CB87C005BDB57 /* NandTests.swift */,
+				AB5B36DA242CB8A6005BDB57 /* XorTests.swift */,
+				AB5B36DC242CB8CB005BDB57 /* XnorTests.swift */,
+				AB5B36DE242CB8F5005BDB57 /* InputTests.swift */,
+				AB5B36E0242CB919005BDB57 /* OuputTests.swift */,
+			);
+			path = Gates;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,6 +189,23 @@
 			productReference = AB4B7FDA241655EA001EEB96 /* Logic Simulator */;
 			productType = "com.apple.product-type.tool";
 		};
+		ABF22ADC242B4EC200B826B3 /* Logic Simulator XCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABF22AE4242B4EC200B826B3 /* Build configuration list for PBXNativeTarget "Logic Simulator XCTests" */;
+			buildPhases = (
+				ABF22AD9242B4EC200B826B3 /* Sources */,
+				ABF22ADA242B4EC200B826B3 /* Frameworks */,
+				ABF22ADB242B4EC200B826B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Logic Simulator XCTests";
+			productName = "Logic Simulator XCTests";
+			productReference = ABF22ADD242B4EC200B826B3 /* Logic Simulator XCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -124,6 +217,9 @@
 				ORGANIZATIONNAME = "Sonnie Hiles";
 				TargetAttributes = {
 					AB4B7FD9241655EA001EEB96 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					ABF22ADC242B4EC200B826B3 = {
 						CreatedOnToolsVersion = 11.4;
 					};
 				};
@@ -142,9 +238,20 @@
 			projectRoot = "";
 			targets = (
 				AB4B7FD9241655EA001EEB96 /* Logic Simulator */,
+				ABF22ADC242B4EC200B826B3 /* Logic Simulator XCTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABF22ADB242B4EC200B826B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AB4B7FD6241655EA001EEB96 /* Sources */ = {
@@ -157,6 +264,30 @@
 				AB4B7FE924166BDA001EEB96 /* Array+Extensions.swift in Sources */,
 				AB4B7FDE241655EB001EEB96 /* main.swift in Sources */,
 				AB4B7FEB24166BF6001EEB96 /* Bool+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABF22AD9242B4EC200B826B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5B36DF242CB8F5005BDB57 /* InputTests.swift in Sources */,
+				AB5B36DB242CB8A6005BDB57 /* XorTests.swift in Sources */,
+				ABF22AE0242B4EC200B826B3 /* Logic_Simulator_XCTests.swift in Sources */,
+				AB5B36D5242CB823005BDB57 /* NorTests.swift in Sources */,
+				AB5B36D3242CB7F2005BDB57 /* OrTests.swift in Sources */,
+				AB5B36CB242CB724005BDB57 /* Array+Extensions.swift in Sources */,
+				ABF22AE9242B4F0400B826B3 /* Array+ExtensionsTests.swift in Sources */,
+				AB5B36CF242CB740005BDB57 /* GateModel.swift in Sources */,
+				AB5B36D9242CB87C005BDB57 /* NandTests.swift in Sources */,
+				AB5B36D7242CB856005BDB57 /* AndTests.swift in Sources */,
+				AB5B36CE242CB73C005BDB57 /* Runner.swift in Sources */,
+				AB5B36E1242CB919005BDB57 /* OuputTests.swift in Sources */,
+				AB5B36DD242CB8CB005BDB57 /* XnorTests.swift in Sources */,
+				AB5B36D1242CB769005BDB57 /* NotTests.swift in Sources */,
+				AB5B36CC242CB727005BDB57 /* Bool+Extensions.swift in Sources */,
+				AB5B36CD242CB739005BDB57 /* Gates.swift in Sources */,
+				AB5B36E3242CB9B2005BDB57 /* Bool+ExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +410,7 @@
 		AB4B7FE2241655EB001EEB96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88Z75G4GDY;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -290,9 +422,46 @@
 		AB4B7FE3241655EB001EEB96 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88Z75G4GDY;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		ABF22AE2242B4EC200B826B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Logic Simulator XCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sonniehiles.Logic-Simulator-XCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ABF22AE3242B4EC200B826B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Logic Simulator XCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sonniehiles.Logic-Simulator-XCTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -315,6 +484,15 @@
 			buildConfigurations = (
 				AB4B7FE2241655EB001EEB96 /* Debug */,
 				AB4B7FE3241655EB001EEB96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABF22AE4242B4EC200B826B3 /* Build configuration list for PBXNativeTarget "Logic Simulator XCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABF22AE2242B4EC200B826B3 /* Debug */,
+				ABF22AE3242B4EC200B826B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

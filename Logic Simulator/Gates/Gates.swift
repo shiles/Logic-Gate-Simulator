@@ -16,6 +16,18 @@ public protocol Gate {
     func run()
 }
 
+extension Gate {
+    
+    mutating func withInput(inputA: Bool, inputB: Bool? = nil) {
+        let inA = Input(initialValue: inputA)
+        var inB: Input?
+
+        if let inputB = inputB { inB = Input(initialValue: inputB) }
+
+        self.inputs = [inA, inB].compactMap { $0 }
+    }
+}
+
 public class Not: Gate {
     public var inputs: [Gate] = []
     public var output: Bool = false
