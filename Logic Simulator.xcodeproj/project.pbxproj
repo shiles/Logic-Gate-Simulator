@@ -30,6 +30,7 @@
 		AB5B36E3242CB9B2005BDB57 /* Bool+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36E2242CB9B2005BDB57 /* Bool+ExtensionsTests.swift */; };
 		AB5B36E6242CBAF2005BDB57 /* FullAdderLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36E5242CBAF2005BDB57 /* FullAdderLogicTests.swift */; };
 		AB5B36E8242CC404005BDB57 /* FlipFlopLoigcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36E7242CC404005BDB57 /* FlipFlopLoigcTests.swift */; };
+		AB5B36EA242CDB63005BDB57 /* OrderingLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B36E9242CDB63005BDB57 /* OrderingLogicTests.swift */; };
 		ABF22AE9242B4F0400B826B3 /* Array+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF22AE8242B4F0400B826B3 /* Array+ExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		AB5B36E2242CB9B2005BDB57 /* Bool+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		AB5B36E5242CBAF2005BDB57 /* FullAdderLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullAdderLogicTests.swift; sourceTree = "<group>"; };
 		AB5B36E7242CC404005BDB57 /* FlipFlopLoigcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipFlopLoigcTests.swift; sourceTree = "<group>"; };
+		AB5B36E9242CDB63005BDB57 /* OrderingLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingLogicTests.swift; sourceTree = "<group>"; };
 		ABF22ADD242B4EC200B826B3 /* Logic Simulator XCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Logic Simulator XCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF22AE1242B4EC200B826B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABF22AE8242B4F0400B826B3 /* Array+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ExtensionsTests.swift"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				AB5B36E5242CBAF2005BDB57 /* FullAdderLogicTests.swift */,
 				AB5B36E7242CC404005BDB57 /* FlipFlopLoigcTests.swift */,
+				AB5B36E9242CDB63005BDB57 /* OrderingLogicTests.swift */,
 			);
 			path = "Example Circuits";
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				AB5B36D5242CB823005BDB57 /* NorTests.swift in Sources */,
 				AB5B36D3242CB7F2005BDB57 /* OrTests.swift in Sources */,
 				AB5B36CB242CB724005BDB57 /* Array+Extensions.swift in Sources */,
+				AB5B36EA242CDB63005BDB57 /* OrderingLogicTests.swift in Sources */,
 				ABF22AE9242B4F0400B826B3 /* Array+ExtensionsTests.swift in Sources */,
 				AB5B36CF242CB740005BDB57 /* GateModel.swift in Sources */,
 				AB5B36E6242CBAF2005BDB57 /* FullAdderLogicTests.swift in Sources */,
