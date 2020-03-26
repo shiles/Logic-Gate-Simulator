@@ -48,8 +48,8 @@ print("\n")
 // MARK: - Nands Example Circuit
 
 // Number Two
-var input1 = Input(initialValue: true)
-var input2 = Input(initialValue: true)
+var input1 = Input(initialValue: false)
+var input2 = Input(initialValue: false)
 
 var nand1 = Nand()
 var nand2 = Nand()

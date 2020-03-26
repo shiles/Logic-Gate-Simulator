@@ -9,6 +9,7 @@
 import XCTest
 @testable import Logic_Simulator
 
+// Combinatorial Example
 struct FullAdder {
     // Inputs
     var inputA = Input(initialValue: false)

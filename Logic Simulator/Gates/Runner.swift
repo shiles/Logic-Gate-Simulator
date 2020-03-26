@@ -14,7 +14,11 @@ class Runner {
         model.compactMap{ $0 as? Output }.forEach { $0.hasChanged = true }
         
         while(model.outputsDidChange) {
+            print("Before Simulation Round")
+            model.compactMap{ $0 as? Nand }.forEach { print($0.output) }
             model.forEach { gate in gate.run() }
+            print("After Simulation Round")
+            model.compactMap{ $0 as? Nand }.forEach { print($0.output) }
         }
     }
 }
