@@ -19,7 +19,9 @@ struct FlipFlop {
     let outputA = Output()
     let outputB = Output()
     
-    var model: GateModel {
+    let model: GateModel
+    
+    init() {
         // Intermediary Gates
         let norA = Nor()
         let norB = Nor()
@@ -30,7 +32,7 @@ struct FlipFlop {
         outputA.inputs = [norA]
         outputB.inputs = [norB]
         
-        return [inputSet, inputReset, norA, norB, outputA, outputB]
+        model = [inputSet, inputReset, norA, norB, outputA, outputB]
     }
 }
 
@@ -77,5 +79,46 @@ class FlipFlopLoigcTests: XCTestCase {
        XCTAssertTrue(flipFlop.outputA.output)
        XCTAssertFalse(flipFlop.outputB.output)
     }
+    
+    func testFlipFlopFalseFalseAfterFalseTrue() {
+        // Given - Set Initial State
+        let flipFlop = FlipFlop()
+        flipFlop.inputSet.output = false
+        flipFlop.inputReset.output = true
+        Runner.simulate(flipFlop.model)
+        XCTAssertFalse(flipFlop.outputA.output)
+        XCTAssertTrue(flipFlop.outputB.output)
+        
+        // Given - New State
+        flipFlop.inputSet.output = false
+        flipFlop.inputReset.output = false
+        
+        // When
+        Runner.simulate(flipFlop.model)
 
+        // Then
+        XCTAssertFalse(flipFlop.outputA.output)
+        XCTAssertTrue(flipFlop.outputB.output)
+    }
+
+    func testFlipFlopFalseFalseAfterTrueFalse(){
+        // Given - Set Initial State
+        let flipFlop = FlipFlop()
+        flipFlop.inputSet.output = true
+        flipFlop.inputReset.output = false
+        Runner.simulate(flipFlop.model)
+        XCTAssertTrue(flipFlop.outputA.output)
+        XCTAssertFalse(flipFlop.outputB.output)
+        
+        // Given - New State
+        flipFlop.inputSet.output = false
+        flipFlop.inputReset.output = false
+        
+        // When
+        Runner.simulate(flipFlop.model)
+
+        // Then
+        XCTAssertTrue(flipFlop.outputA.output)
+        XCTAssertFalse(flipFlop.outputB.output)
+    }
 }
