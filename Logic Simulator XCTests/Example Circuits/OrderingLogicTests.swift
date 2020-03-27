@@ -17,6 +17,24 @@ struct HalfAdder {
     let outputSum = Output()
     let outputCarry = Output()
     
+    var model: GateModel {
+        // Intermediary Gates
+        let xor = Xor()
+        let and = And()
+        
+        // Conections
+        xor.inputs = [inputA, inputB]
+        and.inputs = [inputA, inputB]
+        outputSum.inputs = [xor]
+        outputCarry.inputs = [and]
+        
+        return [inputA, inputB, xor, and, outputSum, outputCarry]
+    }
+    
+    var permutations: [GateModel] {
+        permute(items: model)
+    }
+    
     // Models
     var modelForward: GateModel {
         // Intermediary Gates
@@ -62,174 +80,97 @@ struct HalfAdder {
     
 }
 
+func permute<C: Collection>(items: C) -> [[C.Iterator.Element]] {
+    var scratch = Array(items)
+    var result: [[C.Iterator.Element]] = []
+
+    func heap(_ n: Int) {
+        if n == 1 {
+            result.append(scratch)
+            return
+        }
+
+        for i in 0..<n-1 {
+            heap(n-1)
+            let j = (n%2 == 1) ? 0 : i
+            scratch.swapAt(j, n-1)
+        }
+        heap(n-1)
+    }
+
+    heap(scratch.count)
+
+    return result
+}
+
 class OrderingLogicTests: XCTestCase {
 
-    func testHalfAdderForwardsFalseFalse() {
-        // Given
+    func testHalfAdderFalseFalse() {
+        //Given
         let halfAdder = HalfAdder()
         halfAdder.inputA.output = false
         halfAdder.inputB.output = false
+        let modelPermuations = halfAdder.permutations
         
-        // When
-        Runner.simulate(halfAdder.modelForward)
+        for model in modelPermuations {
+            // When
+            Runner.simulate(model)
+            
+            // Then
+            XCTAssertFalse(halfAdder.outputSum.output)
+            XCTAssertFalse(halfAdder.outputCarry.output)
+        }
         
-        // Then
-        XCTAssertFalse(halfAdder.outputSum.output)
-        XCTAssertFalse(halfAdder.outputCarry.output)
     }
     
-    func testHalfAdderBackwardsFalseFalse() {
-        // Given
-        let halfAdder = HalfAdder()
-        halfAdder.inputA.output = false
-        halfAdder.inputB.output = false
-        
-        // When
-        Runner.simulate(halfAdder.modelBackwards)
-        
-        // Then
-        XCTAssertFalse(halfAdder.outputSum.output)
-        XCTAssertFalse(halfAdder.outputCarry.output)
-    }
-    
-    func testHalfAdderRandomFalseFalse() {
-        // Given
-        let halfAdder = HalfAdder()
-        halfAdder.inputA.output = false
-        halfAdder.inputB.output = false
-        
-        // When
-        Runner.simulate(halfAdder.modelRandom)
-        
-        // Then
-        XCTAssertFalse(halfAdder.outputSum.output)
-        XCTAssertFalse(halfAdder.outputCarry.output)
-    }
-    
-    func testHalfAdderForwardsTrueFalse() {
+    func testHalfAdderTrueFalse() {
         // Given
         let halfAdder = HalfAdder()
         halfAdder.inputA.output = true
         halfAdder.inputB.output = false
+        let modelPermuations = halfAdder.permutations
         
-        // When
-        Runner.simulate(halfAdder.modelForward)
-        
-        // Then
-        XCTAssertTrue(halfAdder.outputSum.output)
-        XCTAssertFalse(halfAdder.outputCarry.output)
+        for model in modelPermuations {
+            // When
+            Runner.simulate(model)
+            
+            // Then
+            XCTAssertTrue(halfAdder.outputSum.output)
+            XCTAssertFalse(halfAdder.outputCarry.output)
+        }
     }
     
-    func testHalfAdderBackwardsTrueFalse() {
-        // Given
-        let halfAdder = HalfAdder()
-        halfAdder.inputA.output = true
-        halfAdder.inputB.output = false
-        
-        // When
-        Runner.simulate(halfAdder.modelBackwards)
-        
-        // Then
-        XCTAssertTrue(halfAdder.outputSum.output)
-        XCTAssertFalse(halfAdder.outputCarry.output)
-    }
-    
-    func testHalfAdderRandomTrueFalse() {
-        // Given
-        let halfAdder = HalfAdder()
-        halfAdder.inputA.output = true
-        halfAdder.inputB.output = false
-        
-        // When
-        Runner.simulate(halfAdder.modelRandom)
-        
-        // Then
-        XCTAssertTrue(halfAdder.outputSum.output)
-        XCTAssertFalse(halfAdder.outputCarry.output)
-    }
-    
-    func testHalfAdderForwardsFalseTrue() {
+    func testHalfAdderFalseTrue(){
         // Given
         let halfAdder = HalfAdder()
         halfAdder.inputA.output = false
         halfAdder.inputB.output = true
+        let modelPermuations = halfAdder.permutations
         
-        // When
-        Runner.simulate(halfAdder.modelForward)
-        
-        // Then
-        XCTAssertTrue(halfAdder.outputSum.output)
-        XCTAssertFalse(halfAdder.outputCarry.output)
+        for model in modelPermuations {
+            // When
+            Runner.simulate(model)
+            
+            // Then
+            XCTAssertTrue(halfAdder.outputSum.output)
+            XCTAssertFalse(halfAdder.outputCarry.output)
+        }
     }
     
-    func testHalfAdderBackwardsFalseTrue() {
-        // Given
-        let halfAdder = HalfAdder()
-        halfAdder.inputA.output = false
-        halfAdder.inputB.output = true
-        
-        // When
-        Runner.simulate(halfAdder.modelBackwards)
-        
-        // Then
-        XCTAssertTrue(halfAdder.outputSum.output)
-        XCTAssertFalse(halfAdder.outputCarry.output)
-    }
-    
-    func testHalfAdderRandomFalseTrue() {
-        // Given
-        let halfAdder = HalfAdder()
-        halfAdder.inputA.output = false
-        halfAdder.inputB.output = true
-        
-        // When
-        Runner.simulate(halfAdder.modelRandom)
-        
-        // Then
-        XCTAssertTrue(halfAdder.outputSum.output)
-        XCTAssertFalse(halfAdder.outputCarry.output)
-    }
-
-    func testHalfAdderForwardsTrueTrue() {
+    func testHalfAdderTrueTrue() {
         // Given
         let halfAdder = HalfAdder()
         halfAdder.inputA.output = true
         halfAdder.inputB.output = true
+        let modelPermuations = halfAdder.permutations
         
-        // When
-        Runner.simulate(halfAdder.modelForward)
-        
-        // Then
-        XCTAssertFalse(halfAdder.outputSum.output)
-        XCTAssertTrue(halfAdder.outputCarry.output)
+        for model in modelPermuations {
+            // When
+            Runner.simulate(model)
+            
+            // Then
+            XCTAssertFalse(halfAdder.outputSum.output)
+            XCTAssertTrue(halfAdder.outputCarry.output)
+        }
     }
-    
-    func testHalfAdderBackwardsTrueTrue() {
-        // Given
-        let halfAdder = HalfAdder()
-        halfAdder.inputA.output = true
-        halfAdder.inputB.output = true
-        
-        // When
-        Runner.simulate(halfAdder.modelBackwards)
-        
-        // Then
-        XCTAssertFalse(halfAdder.outputSum.output)
-        XCTAssertTrue(halfAdder.outputCarry.output)
-    }
-    
-    func testHalfAdderRandomTrueTrue() {
-        // Given
-        let halfAdder = HalfAdder()
-        halfAdder.inputA.output = true
-        halfAdder.inputB.output = true
-        
-        // When
-        Runner.simulate(halfAdder.modelRandom)
-        
-        // Then
-        XCTAssertFalse(halfAdder.outputSum.output)
-        XCTAssertTrue(halfAdder.outputCarry.output)
-    }
-
 }
