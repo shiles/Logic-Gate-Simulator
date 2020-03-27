@@ -68,16 +68,30 @@ class FlipFlopLoigcTests: XCTestCase {
     
     func testFlipFlopFalseFalse() {
         // Given
-       let flipFlop = FlipFlop()
-       flipFlop.inputSet.output = false
-       flipFlop.inputReset.output = false
-       
-       // When
-       Runner.simulate(flipFlop.model)
-       
-       // Then
-       XCTAssertTrue(flipFlop.outputA.output)
-       XCTAssertFalse(flipFlop.outputB.output)
+        let flipFlop = FlipFlop()
+        flipFlop.inputSet.output = false
+        flipFlop.inputReset.output = false
+
+        // When
+        Runner.simulate(flipFlop.model)
+
+        // Then
+        XCTAssertTrue(flipFlop.outputA.output)
+        XCTAssertFalse(flipFlop.outputB.output)
+    }
+    
+    func testFlipFlopTrueTrue() {
+        // Given
+        let flipFlop = FlipFlop()
+        flipFlop.inputSet.output = true
+        flipFlop.inputReset.output = true
+
+        // When
+        Runner.simulate(flipFlop.model)
+
+        // Then
+        XCTAssertFalse(flipFlop.outputA.output)
+        XCTAssertFalse(flipFlop.outputB.output)
     }
     
     func testFlipFlopFalseFalseAfterFalseTrue() {
